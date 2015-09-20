@@ -11,7 +11,7 @@ let g:mapleader= ","
 "设定vim与vi不兼容"
 set nocompatible
 "自动缩进，即为新行自动添加与当前行同等的缩进"
-set autoindent
+:set autoindent
 "类似C语言程序的缩进"
 set cindent
 set showmatch
@@ -29,6 +29,9 @@ set expandtab
 set tabstop=4
 "设定<<和>>命令移动时的宽度为４"
 set shiftwidth=4
+
+"为方便复制，用<F2>开启／关闭行号显示
+nnoremap <F2> :set nonumber!<CR>
 
 "颜色方案"
 set t_Co=256
@@ -60,7 +63,7 @@ set matchtime=2
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
 :inoremap { {}<ESC>i
-:inoremap } <c-r>=ClosePair('}')<CR>
+ inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
 ":inoremap < <><ESC>i
